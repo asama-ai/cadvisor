@@ -40,6 +40,7 @@ if [ "${go_version:0:3}" = "1.4" ]; then
 fi
 
 ldflags="
+  -s -w
   -X ${repo_path}/version.Version${ldseparator}${version}
   -X ${repo_path}/version.Revision${ldseparator}${revision}
   -X ${repo_path}/version.Branch${ldseparator}${branch}
